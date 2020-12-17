@@ -1,10 +1,10 @@
 /*
-	Última questão do formulário da avaliação 2
+	Ãšltima questÃ£o do formulÃ¡rio da avaliaÃ§Ã£o 2
 	Dupla: Milena Lins e Gabriel Alves
 	Data: 15/12/20
 */
 
-// Funções de manipulação de pilhas do material enviado ao classroom:
+// FunÃ§Ãµes de manipulaÃ§aÃµ de pilhas do material enviado ao classroom:
 
 #include <stdio.h>
 #include <string.h>
@@ -52,8 +52,6 @@ float pilha_pop (Pilha* p) {
 	return value;
 };
 
-
-
 void pilha_exclui (Pilha* p) {
 	Elemento *t, *perc = p->topo;
 	while (perc != NULL) {
@@ -65,7 +63,7 @@ void pilha_exclui (Pilha* p) {
 };
 
 
-// Funções de manipulação de pilha desenvolvidas por nós (para exibir pilha e, respondendo a questão, uma função para verificar sua sintaxe no uso correto dos parênteses):
+// FunÃ§Ãµes de manipulaÃ§Ã£o de pilhas desenvolvidas por nÃ³s (para exibir pilha e, respondendo a questÃ£o, para verificar sua sintaxe no uso correto dos parÃªnteses):
 
 void pilha_exibe (Pilha* p) {
 	Elemento *t, *perc = p->topo;
@@ -93,7 +91,7 @@ void pilha_verifica_sintaxe (Pilha* p) {
 			};
 		}
 		else {
-			printf ("Um erro de sintaxe foi detectado: Parênteses abertos não foram fechados! ");
+			printf ("Um erro de sintaxe foi detectado: Parï¿½nteses abertos nï¿½o foram fechados! ");
 			exit(1);
 		};
 
@@ -104,7 +102,7 @@ void pilha_verifica_sintaxe (Pilha* p) {
 	};
 	
 	if (cont < 0) {
-		printf ("Há parênteses fechados que não foram abertos!");
+		printf ("Hï¿½ parï¿½nteses fechados que nï¿½o foram abertos!");
 		exit(1);
 	} else {
 		printf ("Sintaxe correta! ");
@@ -112,8 +110,8 @@ void pilha_verifica_sintaxe (Pilha* p) {
 };
 
 main(){
-	// Considerar que a expressão é exibida ao contrário em pilha_exibe(p), já que a lógica de pilha é que o último elemento da expressão seja exibido primeiro
-	// Descomentar os casos que quizer testar, um por vez
+	// Considerar que a expresÃ£o Ã© exibida ao contrÃ¡rio em pilha_exibe(p), jÃ¡ que a lÃ³gica de implementaÃ§Ã£o da pilha Ã© a de que o Ãºltimo elemento da expressÃ£o seja exibido primeiro.
+	// Descomentar os casos que quizer testar, um por vez.
 	
 	/* Caso de sintaxe correta:
 	    Pilha *p = pilha_cria ();
@@ -123,7 +121,7 @@ main(){
 	    pilha_verifica_sintaxe(p);
 	*/
 	
-	/* Caso de erro por parêntese aberto no final, sem ser fechado:
+	/* Caso de erro por parÃªntese aberto no final, sem ser fechado:
 	    Pilha *p = pilha_cria ();
 
 	    pilha_push(p, ')'); pilha_push(p, 'a'); pilha_push(p, '+'); pilha_push(p, 'b'); pilha_push(p, '(');
@@ -131,7 +129,7 @@ main(){
 	    pilha_verifica_sintaxe(p);
 	*/
 	
-	/* Caso de erro por parêntese fechado sem abertura:
+	/* Caso de erro por parÃªntese fechado sem abertura:
 	    Pilha *p = pilha_cria ();
 
 	    pilha_push(p, ')'); pilha_push(p, '('); pilha_push(p, 'a'); pilha_push(p, '+'); pilha_push(p, 'b'); pilha_push(p, ')');
